@@ -1,0 +1,44 @@
+{
+    "name": "bbt",
+    "displayName": "Bitcoin Brasil Ticker",
+    "description": "Exibe a cotação das principais exchanges",
+    "version": "0.0.1",
+    "publisher": "michelwilhelm",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "configuration": {
+            "properties": {
+                "bbt.markets": {
+                    "type": "array",
+                    "default": [],
+                    "description": "Lista das exchanges que deseja exibir a cotação"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^2.5.2",
+        "vscode": "^1.1.5",
+        "mocha": "^3.5.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "bower": "^1.8.2"
+    }
+}
