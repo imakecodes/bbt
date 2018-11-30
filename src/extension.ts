@@ -34,7 +34,6 @@ const config = vscode.workspace.getConfiguration()
 
 function onWorkspaceSettingsUpdate(): void {
     vscode.workspace.onDidChangeConfiguration(params => {
-        console.log('uaehuaehaehuh')
         cleanup()
         return refresh()
     });
